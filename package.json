@@ -1,0 +1,25 @@
+{
+  "name": "devops",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhmdkhateeb74/Devops.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mhmdkhateeb74/Devops/issues"
+  },
+  "homepage": "https://github.com/mhmdkhateeb74/Devops#readme",
+  "dependencies": {
+    "jest": "^30.2.0",
+    "save-dev": "^0.0.1-security"
+  }
+}
