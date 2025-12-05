@@ -31,8 +31,8 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/demo:latest
-          platforms: linux/arm64
-          # למשל: galgdev/devops-cd-demo:latest
+          #: linux/arm64
+        
 
   deploy:
     runs-on: ubuntu-latest
