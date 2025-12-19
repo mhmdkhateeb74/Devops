@@ -30,7 +30,8 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/test:latest
+          tags: 
+                ${{ secrets.DOCKERHUB_USERNAME }}/test:latest
                 ${{ secrets.DOCKERHUB_USERNAME }}/test:$${{github.sha}}
           platforms: linux/arm64
         
