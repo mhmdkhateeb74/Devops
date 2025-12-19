@@ -2,7 +2,7 @@ name: CD - Build, Push & Deploy
 
 on:
   push:
-    branches: [ "main" ]   # אפשר לשנות ל-branch אחר אם תרצה
+    branches: [ "main" ]   
 
 jobs:
   build-and-push:
