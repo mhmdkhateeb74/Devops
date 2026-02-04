@@ -1,26 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - Mohammad Khateeb</title>
+
+  <style>
+    :root{
+      --bg:#0b0f17;
+      --card:#121a27;
+      --text:#e8eefc;
+      --muted:#a9b4cc;
+      --accent:#5eead4;
+      --border:rgba(255,255,255,.1);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, Arial;
+      background: radial-gradient(900px 500px at 20% 0%, rgba(94,234,212,.12), transparent 60%),
+                  radial-gradient(900px 500px at 90% 20%, rgba(99,102,241,.10), transparent 60%),
+                  var(--bg);
+      color:var(--text);
+    }
+
+    .container{max-width:1000px;margin:0 auto;padding:16px}
+
+    header{
+      position:sticky;
+      top:0;
+      background: rgba(11,15,23,.75);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--border);
+      z-index:10;
+    }
+
+    .headerContent{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    .profile{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .avatar{
+      width:90px;
+      height:90px;
+      border-radius:18px;
+      object-fit:cover;
+      border:1px solid var(--border);
+    }
+
+    h1{margin:0;font-size:26px}
+    .subtitle{margin:6px 0 10px;color:var(--muted)}
+
+    nav{display:flex;gap:10px;flex-wrap:wrap}
+
+    a{
+      color:var(--text);
+      text-decoration:none;
+      border:1px solid var(--border);
+      padding:8px 10px;
+      border-radius:12px;
+      transition:.15s;
+    }
+    a:hover{
+      border-color:var(--accent);
+      transform:translateY(-1px);
+    }
+
+    .card{
+      background:rgba(18,26,39,.85);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:18px;
+      margin:14px 0;
+      box-shadow:0 10px 30px rgba(0,0,0,.25);
+    }
+
+    h2{margin:0 0 10px}
+    p{color:var(--muted);line-height:1.7}
+
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+    @media(max-width:800px){
+      .grid{grid-template-columns:1fr}
+    }
+
+    ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.8}
+
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .pill{
+      border:1px solid var(--border);
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.03);
+    }
+
+    .projects{
+      display:grid;
+      gap:12px;
+    }
+    .project{
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:14px;
+      background:rgba(255,255,255,.02);
+    }
+
+    footer{
+      border-top:1px solid var(--border);
+      text-align:center;
+      padding:16px;
+      color:var(--muted);
+      margin-top:20px;
+    }
+  </style>
 </head>
+
 <body>
 
-    <img src="./img/pic.jpg" alt="person">
-    <h3>Name:Mohmmed Khateeb</h2>
-    <hr>
-     <h4>Age:21</h4> 
-     <hr>  
-     <a>
-    “I’m a motivated person,
-         who enjoys learning new skills,
-         and exploring different areas,
-          especially in technology.
-    </a>
-    <button onclick="alert(`https://github.com/mhmdkhateeb74?tab=repositories`)">Github</button>
-    <hr>
+<header>
+  <div class="container headerContent">
+    <div class="profile">
+      <img class="avatar"
+           src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&q=80"
+           alt="Profile picture">
+      <div>
+        <h1>Mohammad Khateeb</h1>
+        <p class="subtitle">Software Development Student | DevOps & Web</p>
 
+        <div class="links">
+          <a href="https://github.com/" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+          <a href="mailto:mhmdkhateeb92@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#experience">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section id="about" class="card">
+    <h2>About Me</h2>
+    <p>
+      I am Mohammad Khateeb, a final-year college student learning software
+      development and DevOps. I am not working professionally yet, but I am
+      actively building projects and gaining hands-on experience. I have a strong
+      foundation in HTML, CSS, and JavaScript, experience with Node.js and SQL,
+      and I am currently improving my skills in React and Linux. I am motivated
+      to learn, practice, and grow as a developer.
+    </p>
+  </section>
+
+  <section id="experience" class="grid">
+    <div class="card">
+      <h2>Education & Learning</h2>
+      <ul>
+        <li>Final-year college student – Software Development</li>
+        <li>Web Development: HTML, CSS, JavaScript</li>
+        <li>React fundamentals</li>
+        <li>Backend development with Node.js</li>
+        <li>Databases and SQL</li>
+        <li>Linux & DevOps basics</li>
+        <li>C#, C++ and Arduino programming</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Goals</h2>
+      <ul>
+        <li>Gain real-world development experience</li>
+        <li>Build strong full-stack projects</li>
+        <li>Improve DevOps and deployment skills</li>
+        <li>Start a career as a Junior Developer</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills" class="card">
+    <h2>Technical Skills</h2>
+    <div class="skills">
+      <span class="pill">HTML</span>
+      <span class="pill">CSS</span>
+      <span class="pill">JavaScript</span>
+      <span class="pill">React</span>
+      <span class="pill">Node.js</span>
+      <span class="pill">SQL</span>
+      <span class="pill">Linux</span>
+      <span class="pill">DevOps</span>
+      <span class="pill">Arduino</span>
+      <span class="pill">C#</span>
+      <span class="pill">C++</span>
+    </div>
+  </section>
+
+  <section id="projects" class="card">
+    <h2>Personal Projects</h2>
+
+    <div class="projects">
+      <div class="project">
+        <h3>Blood Pressure Tracker</h3>
+        <p>
+          A Node.js application for managing users and blood pressure
+          measurements.
+        </p>
+        <a href="https://github.com/" target="_blank">Repository</a>
+      </div>
+
+      <div class="project">
+        <h3>Smart Panic Button</h3>
+        <p>
+          A real-time Arduino and web project using MQTT and WebSocket
+          communication.
+        </p>
+        <a href="https://github.com/" target="_blank">Repository</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="card">
+    <h2>Contact</h2>
+    <p>
+      You can contact me via email:
+      <br><br>
+      <a href="mailto:mhmdkhateeb92@gmail.com">
+        mhmdkhateeb92@gmail.com
+      </a>
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  © <span id="year"></span> Mohammad Khateeb
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
