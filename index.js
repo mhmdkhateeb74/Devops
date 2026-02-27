@@ -5,9 +5,8 @@ const app = express();
 const port = 8080;
 
 
-
-
 app.use(express.static(path.join(__dirname, 'myweb')));
+app.use('/img', express.static(path.join(__dirname, 'img')));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'myweb', 'web.html'));
